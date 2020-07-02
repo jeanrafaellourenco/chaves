@@ -5,7 +5,7 @@
 function trap_ctrlc ()
 {
     # perform cleanup here
-    echo -e "\nO verso se repete quarenta e quatro vezes."
+    echo -e "\n\t\t\t\tO verso se repete quarenta e quatro vezes."
  
     # exit shell script with error code 2
     # if omitted, shell script will continue execution
@@ -17,6 +17,6 @@ function trap_ctrlc ()
 trap "trap_ctrlc" 2
 
 for ((i = 1 ; i < 45 ; i++)); do
-echo "$i - Volta o cão arrependido com suas orelhas tão fartas, com o osso roido e o rabo entre as patas!"
-sleep 2
+echo -e "$i\t- Volta o cão arrependido com suas orelhas tão fartas, com o osso roido e o rabo entre as patas!"
+sleep $((1 * 5))
 done
