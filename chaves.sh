@@ -28,6 +28,7 @@ frase_chaves=(# Chaves
     "Que coisa, não? - Quico."
     "Já se foi o disco voador - Quico."
     "Miauuuuuuuuuuuuuuuuuuuuu - Quico."
+    "Eu te empresto pra você ver que eu sou um menino bom que ajuda os meninos pobres do terceiro mundo. - Quico."
     # Professor Girafales
     "Por que causa, motivo, razão ou circunstância? - Professor Girafales."
     "Sou Linguiça de sobrenome mestre, digo, sou Professor e meu nome é Girafales. - Professor Girafales."
