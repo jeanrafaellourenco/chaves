@@ -21,8 +21,8 @@
 1. Por que eu juro que nunca tive em minhas mãos uma mãozinha tão pequena como essa. 
 1. Se quiser chegar a ser alguém, devore os livros! 
 1. Quando a fome aperta, a vergonha afrouxa. 
-1. Quantas vezes já te deixei na mão? Não responda! - Seu Madruga"
-1. Essa caveira significa prerigo, entenderam bem? PRE-RI-GO! - Seu Madruga"
+1. Quantas vezes já te deixei na mão? Não responda! "
+1. Essa caveira significa prerigo, entenderam bem? PRE-RI-GO! "
     
 ## Quico
 1. Você não vai com a minha cara?! 
@@ -44,8 +44,7 @@
 1. O senhor não quer entrar pra tomar uma xícara de café? 
     
 ## Chiquinha
-1. O que você tem de burro, você tem de burro. - 
-    Chiquinha.
+1. O que você tem de burro, você tem de burro.
 1. Pois é, pois é, pois é. 
     
 ## Dona Clotilde
