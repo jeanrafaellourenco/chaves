@@ -19,8 +19,8 @@ frase_chaves=(# Chaves
     "Por que eu juro que nunca tive em minhas mãos uma mãozinha tão pequena como essa. - Seu Madruga."
     "Se quiser chegar a ser alguém, devore os livros! - Seu Madruga."
     "Quando a fome aperta, a vergonha afrouxa. - Seu Madruga."
-    "Quantas vezes já te deixei na mão? Não responda! - Seu Madruga"
-    "Essa caveira significa prerigo, entenderam bem? PRE-RI-GO! - Seu Madruga"
+    "Quantas vezes já te deixei na mão? Não responda! - Seu Madruga."
+    "Essa caveira significa prerigo, entenderam bem? PRE-RI-GO! - Seu Madruga."
     # Quico
     "Você não vai com a minha cara?! - Quico."
     "Cale-se, cale-se, cale-se, você me deixa looooouco! - Quico."
