@@ -228,6 +228,7 @@ personagens=(
     "nhonho"
     "popis"
     "jaiminho"
+    "godinez"
     "todos"
 )
 
