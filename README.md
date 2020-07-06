@@ -59,6 +59,9 @@
     
 ## Jaiminho
 1. Quero evitar a fadiga. 
+
+## Godinez
+1. Não fui eu!
     
 ## Outros personagens
 1. Tinha que ser o Chaves de novo! - Todos os personagens.

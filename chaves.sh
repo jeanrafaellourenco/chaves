@@ -1,60 +1,235 @@
 #!/bin/bash
 
-frase_chaves=(# Chaves
-    "Foi sem querer, querendo. - Chaves."
-    "Tá bom, mas não se irrite! - Chaves."
-    "Tudo eu! Tudo eu! Tudo eu! - Chaves."
-    "Isso, isso, isso! - Chaves."
-    "Ninguém tem paciência comigo. - Chaves."
-    "É que me escapuliu! - Chaves."
-    "O verso é repetido quarenta e quatro vezes! - Chaves."
-    "É que eu só tenho oito anos. - Chaves."
-    "Outro gato! - Chaves."
-    "Quem dá e tira com o diabo fica, sua mão se danifica, sua vó será maldita e sua sogra ressuscita. - Chaves."
-    # Seu Madruga
-    "A vingança nunca é plena, mata a alma e envenena. - Seu Madruga."
-    "Não existe trabalho ruim, o ruim é ter que trabalhar. - Seu Madruga."
-    "Eu só não te dou outra porque... - Seu Madruga."
-    "O que é que foi, o que é que foi, o que é que há? - Seu Madruga."
-    "Por que eu juro que nunca tive em minhas mãos uma mãozinha tão pequena como essa. - Seu Madruga."
-    "Se quiser chegar a ser alguém, devore os livros! - Seu Madruga."
-    "Quando a fome aperta, a vergonha afrouxa. - Seu Madruga."
-    "Quantas vezes já te deixei na mão? Não responda! - Seu Madruga."
-    "Essa caveira significa prerigo, entenderam bem? PRE-RI-GO! - Seu Madruga."
-    # Quico
-    "Você não vai com a minha cara?! - Quico."
-    "Cale-se, cale-se, cale-se, você me deixa looooouco! - Quico."
-    "Gentalha! Gentalha! - Quico."
-    "Que coisa, não? - Quico."
-    "Já se foi o disco voador - Quico."
-    "Miauuuuuuuuuuuuuuuuuuuuu - Quico."
-    "Eu te empresto pra você ver que eu sou um menino bom que ajuda os meninos pobres do terceiro mundo. - Quico."
-    # Professor Girafales
-    "Por que causa, motivo, razão ou circunstância? - Professor Girafales."
-    "Sou Linguiça de sobrenome mestre, digo, sou Professor e meu nome é Girafales. - Professor Girafales."
-    "Somente uma vez eu me enganei. Uma vez que pensei estar enganado! - Professor Girafales."
-    # Dona Florinda
-    "Vamos, tesouro, não se misture com essa gentalha! - Dona Florinda."
-    "Que milagre o senhor por aqui! - Dona Florinda."
-    "O senhor não quer entrar pra tomar uma xícara de café? - Dona Florinda."
-    # Chiquinha
-    "O que você tem de burro, você tem de burro. - Chiquinha."
-    "Pois é, pois é, pois é. - Chiquinha."
-    # Dona Clotilde
-    "Quantas vezes tenho que te dizer que não sou nenhuma bruxa? - Dona Clotilde."
-    "É você satanás? - Dona Clotilde."
-    # Nhonho
-    "Olha ele, hein! Olha ele, hein! - Nhonho."
-    # Pópis
-    "Conta tudo para a sua mãe! - Pópis."
-    # Jaiminho
-    "Quero evitar a fadiga. - Carteiro Jaiminho."
-    # Outros personagens
-    "Tinha que ser o Chaves de novo! - Todos os personagens.")
+# Exibe a frase
+function ler_frase {
+    # escolhe o personagem
+    personagens=$1
+    endPersonagem=${#personagens[@]}
+    indiceEscolhido=$((RANDOM % $endPersonagem + 0))
+    personagemEscolhido=${personagens[$indiceEscolhido]}
 
-ini="0"
-end=${#frase_chaves[@]}
-default="Volta o cão arrependido com suas orelhas tão fartas, com o osso roido e o rabo entre as patas! - Chaves."
-num_sort=$((RANDOM % $end + $ini))
+    # pega a frase do personagem
+    carregar_frases_$personagemEscolhido
 
-[ "$num_sort" == "$end" ] && echo -e "$default" || echo -e "${frase_chaves[$num_sort]}"
+    # exibe a frase
+    imprimir_frase "$frases" "$apelidos"
+}
+
+# frases do Chaves
+function carregar_frases_chaves {
+    frases=(
+        "Foi sem querer, querendo."
+        "Tá bom, mas não se irrite!"
+        "Tudo eu! Tudo eu! Tudo eu!"
+        "Isso, isso, isso!"
+        "Ninguém tem paciência comigo."
+        "É que me escapuliu!"
+        "O verso é repetido quarenta e quatro vezes!"
+        "É que eu só tenho oito anos."
+        "Outro gato!"
+        "Quem dá e tira com o diabo fica, sua mão se danifica, sua vó será maldita e sua sogra ressuscita."
+    )
+
+    apelidos=(
+        "Chaves"
+        "Chavinho"
+    )   
+}
+
+# frases do Seu Madruga
+function carregar_frases_madruga {
+    frases=(
+        "A vingança nunca é plena, mata a alma e envenena."
+        "Não existe trabalho ruim, o ruim é ter que trabalhar."
+        "Eu só não te dou outra porque..."
+        "O que é que foi, o que é que foi, o que é que há?"
+        "Por que eu juro que nunca tive em minhas mãos uma mãozinha tão pequena como essa."
+        "Se quiser chegar a ser alguém, devore os livros!"
+        "Quando a fome aperta, a vergonha afrouxa."
+        "Quantas vezes já te deixei na mão? Não responda!"
+        "Essa caveira significa prerigo, entenderam bem? PRE-RI-GO!"
+    )
+
+    apelidos=(
+        "Seu Madruga"
+        "Madruguinha"
+        "Chipanzé reumático"
+        "Tripa seca"
+        "Espantalho"
+        "Lombriga anêmica"
+    )
+}
+
+# frases do Quico
+function carregar_frases_quico {
+    frases=(
+        "Você não vai com a minha cara?!"
+        "Cale-se, cale-se, cale-se, você me deixa looooouco!"
+        "Gentalha! Gentalha!"
+        "Que coisa, não?"
+        "Já se foi o disco voador "
+        "Miauuuuuuuuuuuuuuuuuuuuu"
+        "Eu te empresto pra você ver que eu sou um menino bom que ajuda os meninos pobres do terceiro mundo."
+    )
+
+    apelidos=(
+        "Quico"
+        "Frederico"
+    )
+}
+
+# frases do Professor Girafales
+function carregar_frases_girafales {
+    frases=(
+        "Por que causa, motivo, razão ou circunstância?"
+        "Sou Linguiça de sobrenome mestre, digo, sou Professor e meu nome é Girafales."
+        "Somente uma vez eu me enganei. Uma vez que pensei estar enganado!"
+    )
+
+    apelidos=(
+        "Professor Girafales"
+        "Mestre linguiça"
+        "Quilômetro parado"
+        "Tobogã de salto alto"
+        "Mangueira de bombeiros"
+        "Inocencio Girafales"
+
+    )
+}
+
+# frases da Dona Florinda
+function carregar_frases_florinda {
+    frases=(
+        "Vamos, tesouro, não se misture com essa gentalha!"
+        "Que milagre o senhor por aqui!"
+        "O senhor não quer entrar pra tomar uma xícara de café?"
+    )
+
+    apelidos=(
+        "Dona Florinda"
+        "Velha valentona"
+        "Florinda Corcuera y Villalpando viúva de Matalascallando"
+    )
+}
+
+# frases da Chiquinha
+function carregar_frases_chiquinha {
+    frases=(
+        "O que você tem de burro, você tem de burro."
+        "Pois é, pois é, pois é."
+    )
+
+    apelidos=(
+        "Chiquinha"
+        "Chilindrina"
+    )
+}
+
+# frases da Dona Clotilde
+function carregar_frases_clotilde {
+    frases=(
+        "Quantas vezes tenho que te dizer que não sou nenhuma bruxa?"
+        "É você satanás?"
+    )
+
+    apelidos=(
+        "Dona Clotilde"
+        "Bruxa do 71"
+    )
+}
+
+# frases do Nhonho
+function carregar_frases_nhonho {
+    frases=(
+        "Olha ele, hein! Olha ele, hein!"
+    )
+
+    apelidos=(
+        "Nhonho"
+        "Febronio Barriga Gordorritúa"
+    )
+}
+
+# frases da Pópis
+function carregar_frases_popis {
+    frases=(
+        "Conta tudo para a sua mãe!"
+    )
+
+    apelidos=(
+        "Pópis"
+    )
+}
+
+# frases do Jaiminho
+function carregar_frases_jaiminho {
+    frases=(
+        "Quero evitar a fadiga."
+    )
+
+    apelidos=(
+        "Carteiro Jaiminho"
+    )
+}
+
+# frases do Godinez
+function carregar_frases_godinez {
+    frases=(
+        "Não fui eu!"
+    )
+
+    apelidos=(
+        "Godinez"
+    )
+}
+
+# frases que todos usam
+function carregar_frases_todos {
+    frases=(
+        "Tinha que ser o Chaves de novo!"
+    )
+
+    apelidos=(
+        "Quico"
+        "Chiquinha"
+        "Seu Madruga"
+        "Senhor Barriga"
+        "Dona Florinda"
+        "Dona Clotildess"
+    )
+}
+
+
+# imprime a frase 
+function imprimir_frase {
+    frases=$1
+    apelidos=$2
+
+    endFrase=${#frases[@]}
+    endApelido=${#apelidos[@]}
+    
+    default="Volta o cão arrependido com suas orelhas tão fartas, com o osso roido e o rabo entre as patas! - Chaves."
+
+    ini="0"
+    num_sort_frase=$((RANDOM % $endFrase + $ini))
+    num_sort_apelido=$((RANDOM % $endApelido + $ini))
+
+    [ "$num_sort_frase" == "$endFrase" ] && echo -e "$default" || echo -e "${frases[$num_sort_frase]} - ${apelidos[$num_sort_apelido]}."
+}
+
+personagens=(
+    "chaves"
+    "madruga"
+    "quico"
+    "girafales"
+    "florinda"
+    "chiquinha"
+    "clotilde"
+    "nhonho"
+    "popis"
+    "jaiminho"
+    "godinez"
+    "todos"
+)
+
+ler_frase "$personagens"
