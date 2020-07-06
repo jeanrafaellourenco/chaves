@@ -1,5 +1,5 @@
 # Melhores frases de Chaves
-
+![Volta o cão arrependido...](volta_o_cao.gif)
 
 ## Chaves
 1. Foi sem querer, querendo. 
@@ -65,6 +65,3 @@
     
 ## Outros personagens
 1. Tinha que ser o Chaves de novo! - Todos os personagens.
-
-===========
-![Volta o cão arrependido...](volta_o_cao.gif)
