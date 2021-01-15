@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://www.youtube.com/watch?v=nUZ0GhVy7Ms
 
 test $(which pv) || { echo -e "$0: pacote 'pv' requerido: sudo apt-get install -y pv";  exit 1; }
 
