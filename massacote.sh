@@ -1,6 +1,6 @@
 #!/bin/bash
 
-test $(which pv) || { echo -e "$SCRIPT: pacote 'pv' requerido: sudo apt-get install -y pv";  exit 1; }
+test $(which pv) || { echo -e "$0: pacote 'pv' requerido: sudo apt-get install -y pv";  exit 1; }
 
 echo -e "Prof. Girafales: Vim trazer o seu presente de aniversário." | pv -qL 15; sleep 1
 echo -e "Quico: Um gatoooooo..." | pv -qL 15; sleep 1
