@@ -1,6 +1,8 @@
 # Melhores frases de Chaves
 ![Volta o cão arrependido...](volta_o_cao.gif)
 
+![Volta o cão arrependido...](gato-quico.jpg)
+
 ## Chaves
 1. Foi sem querer, querendo. 
 1. Tá bom, mas não se irrite! 
